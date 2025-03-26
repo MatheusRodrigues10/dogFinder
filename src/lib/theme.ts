@@ -1,17 +1,17 @@
-import { createGlobalStyle } from "styled-components";
-import PoppinsBold from "../Styles/fonts/poppins/PoppinsBold.otf";
-import PoppinsRegular from "../Styles/fonts/poppins/PoppinsRegular.otf";
+import { createGlobalStyle } from 'styled-components'
+import PoppinsBold from '../Styles/fonts/poppins/PoppinsBold.otf'
+import PoppinsRegular from '../Styles/fonts/poppins/PoppinsRegular.otf'
 
 export const theme = {
-  background: "#E6E9ED",
-  primary: "#6342C3",
-  light: "#e2e2e2",
-  text: "#0A2463",
-  error: "#FB3640",
-  border: "#0A2463",
-  button: "#ff3693",
-  white: "#fff",
-};
+  background: '#E6E9ED',
+  primary: '#6342C3',
+  light: '#e2e2e2',
+  text: '#0A2463',
+  error: '#FB3640',
+  border: '#0A2463',
+  button: '#ff3693',
+  white: '#fff',
+}
 
 export const GlobalStyle = createGlobalStyle`
 
@@ -36,4 +36,4 @@ export const GlobalStyle = createGlobalStyle`
   h1 {
     font-family: 'Poppins Bold';
   }
-`;
+`

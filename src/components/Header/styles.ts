@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const Container = styled.nav`
   background-color: ${(props) => props.theme.primary};
@@ -10,7 +10,7 @@ export const Container = styled.nav`
   cursor: pointer;
   padding: 10px;
   width: 100vw;
-`;
+`
 
 export const LogoContainer = styled.div`
   padding: 10px;
@@ -19,5 +19,5 @@ export const LogoContainer = styled.div`
     height: 40px;
     object-fit: contain;
   }
-`;
-export const TitleContainer = styled.div``;
+`
+export const TitleContainer = styled.div``
