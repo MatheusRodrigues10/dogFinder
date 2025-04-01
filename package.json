@@ -4,6 +4,8 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "predeploy": "yarn build",
+    "deploy": "gh-pages -d build",
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
@@ -28,6 +30,7 @@
     "eslint-plugin-prettier": "^5.2.5",
     "eslint-plugin-react-hooks": "^5.1.0",
     "eslint-plugin-react-refresh": "^0.4.19",
+    "gh-pages": "^6.3.0",
     "globals": "^15.15.0",
     "prettier": "^3.5.3",
     "redux-mock-store": "^1.5.5",
