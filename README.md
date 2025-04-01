@@ -2,6 +2,10 @@
 
 Bem-vindo ao **DogFinder**! Um aplicativo simples e intuitivo, desenvolvido para buscar fotos de cachorros a partir da **Dog API**. Você pode selecionar a raça e sub-raça de cachorros, definir a quantidade de imagens a serem retornadas e resetar as configurações.
 
+## Acesse o DogFinder
+
+🔗 [DogFinder no Render](https://dogfinder-xm6o.onrender.com/)
+
 ## Funcionalidades
 
 - **Selecionar Raça**: Escolha a raça do cachorro.
