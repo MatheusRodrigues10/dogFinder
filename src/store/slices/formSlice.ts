@@ -43,4 +43,4 @@ const formSlice = createSlice({
 
 export const { setBreed, setSubBreed, setNumber, setImageResults, setError, resetBreedState } = formSlice.actions;
 
-export default formSlice.reducer
+export default formSlice.reducer;

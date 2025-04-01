@@ -18,7 +18,7 @@ export const fetchDogsData = async () => {
 //buscar por sub raças
 export const fetchDogsSubBreed = async (breed: string) => {
   try {
-    const response = await axios.get(`breed/${breed}/list`)
+    const response = await axios.get(`/breed/${breed}/list`)
     return response?.data
   } catch (err) {
     //verificando se é um erro normal de um inesperado
@@ -33,8 +33,8 @@ export const fetchDogsSubBreed = async (breed: string) => {
 //buscar por imagens
 export const fetchBreedImages = async (breed: string, number: string) => {
   try {
-    const response = await axios.get(`breed/${breed}/images/random/${number}`)
-    return response?.data
+    const response = await axios.get(`/breed/${breed}/images/random/${number}`)
+    return response.data;
   } catch (err) {
     //verificando se é um erro normal de um inesperado
     if (err instanceof Error) {

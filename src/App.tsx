@@ -1,10 +1,11 @@
 import { useEffect, useState, useCallback } from 'react'
 import { fetchDogsData, fetchDogsSubBreed } from './lib/api'
-import { Container, Description, AppBody } from './Styles/styled'
+import { Container, Description } from './Styles/styled'
 import Loader from './components/Loader';
 import DogForm from './components/DogForm';
-import { useSelector, UseSelector } from 'react-redux';
+import { useSelector } from 'react-redux';
 import { RootState } from './store/store';
+import Results from './components/Results';
 
 const App = () => {
   const dogStore = useSelector((state: RootState) => state.form)
@@ -15,6 +16,7 @@ const App = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   const breedState = dogStore?.breed;
+  const imageResultsState = dogStore?.imageResults
 
   const fetchData = useCallback (async () => {
     await fetchDogsData()
@@ -81,7 +83,8 @@ const App = () => {
         setImages={setImages}
         setIsLoading={setIsLoading}
       />
-        <p>Resultados:</p>
+      {imageResultsState ? <Results images={images} /> : null}
+      
     </Container>
   )
 }
