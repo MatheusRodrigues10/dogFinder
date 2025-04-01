@@ -1,38 +1,38 @@
-
-import { useSelector } from "react-redux";
-import { RootState } from "../../../store/store";
-import { Container } from "./styles";
+import { useSelector } from 'react-redux'
+import { RootState } from '../../../store/store'
+import { Container } from './styles'
 
 const DogInfo = () => {
-    const dogStore = useSelector((state: RootState) => state.form)
-    
-    const breedState = dogStore?.breed
-    const subBreedState = dogStore?.subBreed
-    const imageResultsState = dogStore?.imageResults
+  const dogStore = useSelector((state: RootState) => state.form)
 
-    // Capitaliza a primeira letra de cada palavra no nome da raça ou sub-raça.
-    function capitalizeBreed(str: string) {
-        return str.replace(/\b\w/g, (char) => char.toUpperCase());
-    }
+  const breedState = dogStore?.breed
+  const subBreedState = dogStore?.subBreed
+  const imageResultsState = dogStore?.imageResults
 
-    //Retorna o nome da raça e sub-raça (se houver), ou null se nenhuma imagem for encontrada.
-    const renderTitle = () => {
-        if (breedState === "all" || imageResultsState === 0) return null;
+  // Capitaliza a primeira letra de cada palavra no nome da raça ou sub-raça.
+  function capitalizeBreed(str: string) {
+    return str.replace(/\b\w/g, (char) => char.toUpperCase())
+  }
 
-        const breed = capitalizeBreed(breedState);
-        const subBreed = subBreedState !== "all" ? capitalizeBreed(subBreedState) : null;
-    
-        return <span>{subBreed ? `${breed} - ${subBreed}` : breed}</span>;
-    }
+  //Retorna o nome da raça e sub-raça (se houver), ou null se nenhuma imagem for encontrada.
+  const renderTitle = () => {
+    if (breedState === 'all' || imageResultsState === 0) return null
 
-    return (
-        <Container>
-            <>
-                {renderTitle()}
-                <p>{imageResultsState} Resultados</p>
-            </>
-        </Container>
-    )
+    const breed = capitalizeBreed(breedState)
+    const subBreed =
+      subBreedState !== 'all' ? capitalizeBreed(subBreedState) : null
+
+    return <span>{subBreed ? `${breed} - ${subBreed}` : breed}</span>
+  }
+
+  return (
+    <Container>
+      <>
+        {renderTitle()}
+        <p>{imageResultsState} Resultados</p>
+      </>
+    </Container>
+  )
 }
 
-export default DogInfo;
+export default DogInfo

@@ -1,11 +1,11 @@
-import { LoaderContainer, LoadingSpinner } from "./styles"
+import { LoaderContainer, LoadingSpinner } from './styles'
 
 const Loader = () => {
-    return (
-        <LoaderContainer>
-            <LoadingSpinner />
-        </LoaderContainer>
-    )
-};
+  return (
+    <LoaderContainer>
+      <LoadingSpinner />
+    </LoaderContainer>
+  )
+}
 
-export default Loader;
+export default Loader

@@ -7,6 +7,7 @@ const Header = () => {
       <LogoContainer>
         <img src="https://dog.ceo/img/dog-api-logo.svg" alt="Dog App" />
       </LogoContainer>
+
       <TitleContainer>
         <h1>DogFinder</h1>
       </TitleContainer>

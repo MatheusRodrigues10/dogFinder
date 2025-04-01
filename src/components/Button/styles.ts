@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const FetchButton = styled.button`
   appearance: button;
@@ -20,7 +20,7 @@ export const FetchButton = styled.button`
   text-transform: none;
   user-select: none;
   width: 100%;
-`;
+`
 
 export const ResetButton = styled(FetchButton)`
   color: ${(props) => props.theme.error};
@@ -32,4 +32,4 @@ export const ResetButton = styled(FetchButton)`
     color: ${(props) => props.theme.white};
     background-color: ${(props) => props.theme.error};
   }
-`;
+`

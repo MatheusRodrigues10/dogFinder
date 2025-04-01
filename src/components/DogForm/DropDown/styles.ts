@@ -1,15 +1,15 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 interface DropDown {
-  readonly showError?: boolean;
+  readonly showError?: boolean
 }
 
 export const DropdownContainer = styled.div<DropDown>`
   margin: 0px 10px;
   outline: ${(props) =>
-    props.showError ? `2px solid ${props.theme.error}` : "none"};
+    props.showError ? `2px solid ${props.theme.error}` : 'none'};
   border: ${(props) =>
-    props.showError ? `2px solid ${props.theme.error}` : "none"};
+    props.showError ? `2px solid ${props.theme.error}` : 'none'};
   width: 300px;
 
   @media (max-width: 375px) {
@@ -26,7 +26,7 @@ export const DropdownContainer = styled.div<DropDown>`
     width: 100%;
     border-radius: 8px;
   }
-`;
+`
 
 export const Container = styled.div`
   h5 {
@@ -37,11 +37,11 @@ export const Container = styled.div`
       text-align: center;
     }
   }
-`;
+`
 
 export const ErrorText = styled.p`
   color: ${(props) => props.theme.error};
   font-size: 1rem;
   font-weight: bold;
   text-align: left;
-`;
+`

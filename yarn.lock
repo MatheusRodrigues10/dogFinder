@@ -408,6 +408,13 @@
   resolved "https://registry.npmjs.org/@types/json-schema/-/json-schema-7.0.15.tgz"
   integrity sha512-5+fP8P8MFNC+AyZCDxrB2pkZFPGzqQWUzpSeuuVLvm8VMcorNYavBqoFcxK8bQz4Qsbn4oUEEem4wDLfcysGHA==
 
+"@types/node@^18.0.0 || ^20.0.0 || >=22.0.0":
+  version "22.13.14"
+  resolved "https://registry.npmjs.org/@types/node/-/node-22.13.14.tgz"
+  integrity sha512-Zs/Ollc1SJ8nKUAgc7ivOEdIBM8JAKgrqqUYi2J997JuKO7/tpQC+WCetQ1sypiKCQWHdvdg9wBNpUPEWZae7w==
+  dependencies:
+    undici-types "~6.20.0"
+
 "@types/react-dom@^19.0.4":
   version "19.0.4"
   resolved "https://registry.npmjs.org/@types/react-dom/-/react-dom-19.0.4.tgz"
@@ -1212,6 +1219,11 @@ locate-path@^6.0.0:
   dependencies:
     p-locate "^5.0.0"
 
+lodash.isplainobject@^4.0.6:
+  version "4.0.6"
+  resolved "https://registry.npmjs.org/lodash.isplainobject/-/lodash.isplainobject-4.0.6.tgz"
+  integrity sha512-oSXzaWypCMHkPC3NvBEaPHf0KsA5mvPrOPgQWDsbg8n7orZ290M0BmC/jgRZ4vcJ6DTAhjrsSYgdsW/F+MFOBA==
+
 lodash.merge@^4.6.2:
   version "4.6.2"
   resolved "https://registry.npmjs.org/lodash.merge/-/lodash.merge-4.6.2.tgz"
@@ -1426,12 +1438,19 @@ react-refresh@^0.14.2:
   resolved "https://registry.npmjs.org/react/-/react-19.0.0.tgz"
   integrity sha512-V8AVnmPIICiWpGfm6GLzCR/W5FXLchHop40W4nXBmdlEceh16rCN8O8LNWm5bh5XUX91fh7KpA+W0TgMKmgTpQ==
 
+redux-mock-store@^1.5.5:
+  version "1.5.5"
+  resolved "https://registry.npmjs.org/redux-mock-store/-/redux-mock-store-1.5.5.tgz"
+  integrity sha512-YxX+ofKUTQkZE4HbhYG4kKGr7oCTJfB0GLy7bSeqx86GLpGirrbUWstMnqXkqHNaQpcnbMGbof2dYs5KsPE6Zg==
+  dependencies:
+    lodash.isplainobject "^4.0.6"
+
 redux-thunk@^3.1.0:
   version "3.1.0"
   resolved "https://registry.npmjs.org/redux-thunk/-/redux-thunk-3.1.0.tgz"
   integrity sha512-NW2r5T6ksUKXCabzhL9z+h206HQw/NJkcLm1GPImRQ8IzfXwRGqjVhKJGauHirT0DAuyy6hjdnMZaRoAcy0Klw==
 
-redux@^5.0.0, redux@^5.0.1:
+redux@*, redux@^5.0.0, redux@^5.0.1:
   version "5.0.1"
   resolved "https://registry.npmjs.org/redux/-/redux-5.0.1.tgz"
   integrity sha512-M9/ELqF6fy8FwmkpnF0S3YKOqMyoWJ4+CS5Efg2ct3oY9daQvd/Pc71FpGZsVsbl3Cpb+IIcjBDUnnyBdQbq4w==
@@ -1606,6 +1625,11 @@ typescript@>=4.8.4, "typescript@>=4.8.4 <5.9.0", typescript@~5.7.2:
   version "5.7.3"
   resolved "https://registry.npmjs.org/typescript/-/typescript-5.7.3.tgz"
   integrity sha512-84MVSjMEHP+FQRPy3pX9sTVV/INIex71s9TL2Gm5FG/WG1SqXeKyZ0k7/blY/4FdOzI12CBy1vGc4og/eus0fw==
+
+undici-types@~6.20.0:
+  version "6.20.0"
+  resolved "https://registry.npmjs.org/undici-types/-/undici-types-6.20.0.tgz"
+  integrity sha512-Ny6QZ2Nju20vw1SRHe3d9jVu6gJ+4e3+MMpqu7pqE5HT6WsTSlce++GQmK5UXS8mzV8DSYHrQH+Xrf2jVcuKNg==
 
 update-browserslist-db@^1.1.1:
   version "1.1.3"

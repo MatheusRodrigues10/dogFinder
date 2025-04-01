@@ -34,7 +34,7 @@ export const fetchDogsSubBreed = async (breed: string) => {
 export const fetchBreedImages = async (breed: string, number: string) => {
   try {
     const response = await axios.get(`/breed/${breed}/images/random/${number}`)
-    return response.data;
+    return response.data
   } catch (err) {
     //verificando se é um erro normal de um inesperado
     if (err instanceof Error) {

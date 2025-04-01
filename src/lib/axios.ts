@@ -4,5 +4,4 @@ const instance = axios.create({
   baseURL: 'https://dog.ceo/api',
 })
 
-
-export default instance;
+export default instance

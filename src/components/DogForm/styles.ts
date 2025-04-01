@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const DogFormContainer = styled.div`
   display: flex;
@@ -11,4 +11,4 @@ export const DogFormContainer = styled.div`
   padding: 15px;
   background-color: ${(props) => props.theme.white};
   border-radius: 10px;
-`;
+`

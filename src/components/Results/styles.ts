@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const Container = styled.div`
   background-color: ${(props) => props.theme.white};
@@ -12,4 +12,4 @@ export const Container = styled.div`
   h1 {
     color: ${(props) => props.theme.primary};
   }
-`;
+`

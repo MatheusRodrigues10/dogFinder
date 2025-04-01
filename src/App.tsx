@@ -1,50 +1,50 @@
 import { useEffect, useState, useCallback } from 'react'
 import { fetchDogsData, fetchDogsSubBreed } from './lib/api'
 import { Container, Description } from './Styles/styled'
-import Loader from './components/Loader';
-import DogForm from './components/DogForm';
-import { useSelector } from 'react-redux';
-import { RootState } from './store/store';
-import Results from './components/Results';
+import Loader from './components/Loader'
+import DogForm from './components/DogForm'
+import { useSelector } from 'react-redux'
+import { RootState } from './store/store'
+import Results from './components/Results'
 
 const App = () => {
   const dogStore = useSelector((state: RootState) => state.form)
-  
-  const [breedList, setBreedList] = useState(null);
-  const [subBreedList, setSubBreedList] = useState([]);
-  const [images, setImages] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
 
-  const breedState = dogStore?.breed;
+  const [breedList, setBreedList] = useState(null)
+  const [subBreedList, setSubBreedList] = useState([])
+  const [images, setImages] = useState([])
+  const [isLoading, setIsLoading] = useState(true)
+
+  const breedState = dogStore?.breed
   const imageResultsState = dogStore?.imageResults
 
-  const fetchData = useCallback (async () => {
+  const fetchData = useCallback(async () => {
     await fetchDogsData()
       .then((data) => {
-        setBreedList(data?.message);
-        setIsLoading(false);
+        setBreedList(data?.message)
+        setIsLoading(false)
       })
       .catch((error) => {
         console.error(error)
       })
-      if(breedState !=='all') {
-        await fetchDogsSubBreed(breedState)
-          .then((data) => {
-            setSubBreedList(data?.message);
-            setIsLoading(false);
-          })
-          .catch((error) => {
-            console.error(error);
-          })
-      }
-  }, [breedState] );
+    if (breedState !== 'all') {
+      await fetchDogsSubBreed(breedState)
+        .then((data) => {
+          setSubBreedList(data?.message)
+          setIsLoading(false)
+        })
+        .catch((error) => {
+          console.error(error)
+        })
+    }
+  }, [breedState])
 
   useEffect(() => {
-    fetchData();
+    fetchData()
   }, [breedState, fetchData])
 
-  if(isLoading) return <Loader />
-  if(!breedList) return <p>Não foram encontrados cachorros</p>
+  if (isLoading) return <Loader />
+  if (!breedList) return <p>Não foram encontrados cachorros</p>
 
   return (
     <Container>
@@ -70,21 +70,18 @@ const App = () => {
             <li>
               <strong>Styled Components</strong> para estilização dinâmica
             </li>
-            <li>
-              <strong>Jest & React Testing Library</strong> para garantir
-              qualidade com testes automatizados
-            </li>
           </ul>
         </ul>
       </Description>
-      <DogForm 
+
+      <DogForm
         breedList={breedList}
         subBreedList={subBreedList}
         setImages={setImages}
         setIsLoading={setIsLoading}
       />
+
       {imageResultsState ? <Results images={images} /> : null}
-      
     </Container>
   )
 }
