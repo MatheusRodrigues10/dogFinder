@@ -36,12 +36,12 @@ Bem-vindo ao **DogFinder**! Um aplicativo simples e intuitivo, desenvolvido para
 
 4. Inicie o servidor de desenvolvimento:
    ```bash
-   yarn start
+   yarn dev
    ```
 
 5. Abra o navegador e acesse:
    ```
-   http://localhost:3000
+   http://localhost:5173/
    ```
 
 ## Como Usar
