@@ -1,4 +1,3 @@
-import React from 'react'
 import { Container, LogoContainer, TitleContainer } from './styles'
 
 const Header = () => {
