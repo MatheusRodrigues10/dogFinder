@@ -1,54 +1,62 @@
-# React + TypeScript + Vite
+# DogFinder
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Bem-vindo ao **DogFinder**! Um aplicativo simples e intuitivo, desenvolvido para buscar fotos de cachorros a partir da **Dog API**. Você pode selecionar a raça e sub-raça de cachorros, definir a quantidade de imagens a serem retornadas e resetar as configurações.
 
-Currently, two official plugins are available:
+## Funcionalidades
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Selecionar Raça**: Escolha a raça do cachorro.
+- **Selecionar Sub-Raça**: Se disponível, escolha uma sub-raça.
+- **Número de Imagens**: Defina a quantidade de imagens que deseja buscar.
+- **Buscar Fotos**: Mostra as fotos de cachorros de acordo com a seleção.
+- **Resetar Configurações**: Redefine as seleções para o estado inicial.
 
-## Expanding the ESLint configuration
+## Tecnologias Utilizadas
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **ReactJS & TypeScript**: Para criar uma aplicação robusta e tipada.
+- **Redux**: Para gerenciamento eficiente do estado global.
+- **Axios**: Para realizar requisições HTTP à API de cães.
+- **Styled Components**: Para estilização dinâmica e moderna.
+- **Dog API**: Para buscar imagens e dados de raças de cachorros.
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## Como Rodar o Projeto Localmente
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+1. Clone o repositório:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+   ```bash
+   git clone https://github.com/MatheusRodrigues10/dogFinder.git
+   ```
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+2. Navegue até a pasta do projeto:
+
+   ```bash
+   cd dogFinder
+   ```
+
+3. Instale as dependências com o **Yarn**:
+
+   ```bash
+   yarn install
+   ```
+
+4. Inicie o servidor de desenvolvimento:
+
+   ```bash
+   yarn dev
+   ```
+
+5. Abra o navegador e acesse:
+   ```
+   http://localhost:5173/
+   ```
+
+## Como Usar
+
+1. Selecione uma raça no dropdown "Raça".
+2. Selecione uma sub-raça, se disponível.
+3. Escolha o número de imagens que deseja visualizar.
+4. Clique em **Buscar** para ver as imagens de cachorros.
+5. Se desejar, clique em **Resetar** para limpar as configurações e voltar ao estado inicial.
+
+## Contribuindo
+
+Se você deseja contribuir com este projeto, sinta-se à vontade para abrir uma **issue** ou criar um **pull request**.
